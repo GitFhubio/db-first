@@ -32,4 +32,3 @@ Anni Garanzia           TINYINT                   DEFAULT 10
 
 
 Teoricamente si potevano mettere più enum,dipende dalla progettazione
-tipo condizione,porte,numero ruote etc...
