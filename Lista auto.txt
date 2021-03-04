@@ -13,8 +13,9 @@ Peso a vuoto            SMALLINT                  NOTNULL
 Colore esterno          VARCHAR(20)               NULL
 Rivestimenti            VARCHAR(50)               NULL
 Accessori               TEXT                      NULL
-DisponibilitàImmediata  TINYINT                   DEFAULT 1
-Sconto                  TINYINT                   DEFAULT 1
+DisponibilitàImmediata  TINYINT(1)                DEFAULT 1
+Sconto                  TINYINT(1)                DEFAULT 1
+PercSconto              TINYINT                   DEFAULT 0.1
 Carrozzeria             VARCHAR(150)              NULL
 Porte                   TINYINT                   DEFAULT 5
 Posti a sedere          TINYINT                   NOTNULL
@@ -27,8 +28,9 @@ Paese di produzione     VARCHAR(50)               NULL
 Città                   VARCHAR(50)               NOTNULL
 InfoPrecProprietario    TEXT                      NOTNULL
 InfoAcquirente          TEXT                      NOTNULL
-Garanzia                TINYINT                   DEFAULT 1
+Garanzia                TINYINT(1)                DEFAULT 1
 Anni Garanzia           TINYINT                   DEFAULT 10
+Targa                   VARCHAR(20)               NOT NULL UNIQUE
 
 
 Teoricamente si potevano mettere più enum,dipende dalla progettazione
