@@ -20,7 +20,7 @@ Carrozzeria             VARCHAR(150)              NULL
 Porte                   TINYINT                   DEFAULT 5
 Posti a sedere          TINYINT                   NOTNULL
 Alimentazione           VARCHAR(25)               NOTNULL
-Classe emissioni        ENUM(a Euro0 a Euro6)     NOTNULL
+Classe emissioni        ENUM(da Euro0 a Euro6)    NOTNULL
 Descrizione             TEXT                      NULL
 Foto                    VARCHAR                   NULL
 Prezzo                  FLOAT(8,2)                NOTNULL
@@ -33,4 +33,4 @@ Anni Garanzia           TINYINT                   DEFAULT 10
 Targa                   VARCHAR(20)               NOT NULL UNIQUE
 
 
-Teoricamente si potevano mettere più enum,dipende dalla progettazione
+Si potrebbero mettere più enum,o fare scelte differenti: l'importante è che la struttura sia il più coerente possibile alla richiesta, ed ovviamente evitare di allocare memoria completamente inutile in database.
