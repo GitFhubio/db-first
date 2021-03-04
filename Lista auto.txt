@@ -6,7 +6,7 @@ Anno Produzione         YEAR                      NULL
 Condizione              VARCHAR(50)               NOT NULL
 Numero Ruote            TINYINT                   NOT NULL
 Chilometraggio          SMALLINT                  NOTNULL
-Tipo di cambio          VARCHAR(20)               NOTNULL
+Tipo di cambio          ENUM('manuale','auto')    NOTNULL
 Marce                   TINYINT                   DEFAULT 5
 Cilindrata              SMALLINT                  NOTNULL
 Peso a vuoto            SMALLINT                  NOTNULL
@@ -14,12 +14,12 @@ Colore esterno          VARCHAR(20)               NULL
 Rivestimenti            VARCHAR(50)               NULL
 Accessori               TEXT                      NULL
 DisponibilitàImmediata  TINYINT                   DEFAULT 1
-Sconto                  TINYINT                   DEFAULt 1
+Sconto                  TINYINT                   DEFAULT 1
 Carrozzeria             VARCHAR(150)              NULL
 Porte                   TINYINT                   DEFAULT 5
 Posti a sedere          TINYINT                   NOTNULL
 Alimentazione           VARCHAR(25)               NOTNULL
-Classe emissioni        VARCHAR(10)               NOTNULL
+Classe emissioni        ENUM(a Euro0 a Euro6)     NOTNULL
 Descrizione             TEXT                      NULL
 Foto                    VARCHAR                   NULL
 Prezzo                  FLOAT(8,2)                NOTNULL
@@ -29,3 +29,7 @@ InfoPrecProprietario    TEXT                      NOTNULL
 InfoAcquirente          TEXT                      NOTNULL
 Garanzia                TINYINT                   DEFAULT 1
 Anni Garanzia           TINYINT                   DEFAULT 10
+
+
+Teoricamente si potevano mettere più enum,dipende dalla progettazione
+tipo condizione,porte,numero ruote etc...
