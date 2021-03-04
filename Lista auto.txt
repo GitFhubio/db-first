@@ -1,0 +1,31 @@
+Id                      PrimaryKey-bigInt         NOT NULL UNIQUE
+Marca                   varchar(30)               NOT NULL
+Modello                 varchar(25)               NOT NULL
+Anno Immatricolazione   YEAR                      NULL
+Anno Produzione         YEAR                      NULL
+Condizione              VARCHAR(50)               NOT NULL
+Numero Ruote            TINYINT                   NOT NULL
+Chilometraggio          SMALLINT                  NOTNULL
+Tipo di cambio          VARCHAR(20)               NOTNULL
+Marce                   TINYINT                   DEFAULT 5
+Cilindrata              SMALLINT                  NOTNULL
+Peso a vuoto            SMALLINT                  NOTNULL
+Colore esterno          VARCHAR(20)               NULL
+Rivestimenti            VARCHAR(50)               NULL
+Accessori               TEXT                      NULL
+DisponibilitàImmediata  TINYINT                   DEFAULT 1
+Sconto                  TINYINT                   DEFAULt 1
+Carrozzeria             VARCHAR(150)              NULL
+Porte                   TINYINT                   DEFAULT 5
+Posti a sedere          TINYINT                   NOTNULL
+Alimentazione           VARCHAR(25)               NOTNULL
+Classe emissioni        VARCHAR(10)               NOTNULL
+Descrizione             TEXT                      NULL
+Foto                    VARCHAR                   NULL
+Prezzo                  FLOAT(8,2)                NOTNULL
+Paese di produzione     VARCHAR(50)               NULL
+Città                   VARCHAR(50)               NOTNULL
+InfoPrecProprietario    TEXT                      NOTNULL
+InfoAcquirente          TEXT                      NOTNULL
+Garanzia                TINYINT                   DEFAULT 1
+Anni Garanzia           TINYINT                   DEFAULT 10
